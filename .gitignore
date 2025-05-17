@@ -1,15 +1,37 @@
 # IntelliJ IDEA
 .idea/
 *.iml
+*.iws
 
-# 编译输出目录
+# 编译输出
 out/
+build/
+target/
 bin/
+classes/
+
+# 临时文件
+*.log
+*.tmp
+*.swp
+*.bak
+*.class
+*.DS_Store
+
+# Maven
+.mvn/
+!**/src/main/**/.gitkeep
+!**/src/test/**/.gitkeep
+
+# Gradle
+.gradle/
 build/
 
-# 日志文件
-*.log
+# Eclipse（如果切换过 IDE 也建议加上）
+.project
+.classpath
+.settings/
 
-# 系统文件
-.DS_Store
+# OS 系统文件
 Thumbs.db
+.DS_Store
