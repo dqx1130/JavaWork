@@ -7,11 +7,9 @@ class Person2{
     public void setName(String name){
         this.name = name;
     }
-
     public int getBirth() {
         return birth;
     }
-
     public void setBirth(int birth) {
         this.birth = birth;
     }
