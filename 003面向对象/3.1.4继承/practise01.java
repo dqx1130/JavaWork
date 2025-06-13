@@ -18,7 +18,7 @@ class Person2{
         this.age = age;
     }
     public String toString(){
-        return name + " " + age;
+        return this.name + " " + this.age;
     }
 }
 class Student2 extends Person2{
@@ -32,7 +32,7 @@ class Student2 extends Person2{
     }
     @Override
     public String toString(){
-        return super.toString() + " " + score;
+        return super.toString() + " " + this.score;
     }
 }
 class PrimaryStudent extends Student2{
@@ -47,7 +47,7 @@ class PrimaryStudent extends Student2{
     }
     @Override
     public String toString(){
-        return super.toString() + " " + grade;
+        return super.toString() + " " + this.grade;
     }
 }
 
