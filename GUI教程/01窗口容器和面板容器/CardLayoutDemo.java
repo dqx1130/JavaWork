@@ -1,7 +1,6 @@
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JButton;
-import javax.swing.JLabel;
 import javax.swing.JTextField;
 import java.awt.*;
 
@@ -22,6 +21,8 @@ public class CardLayoutDemo {
         cards.add(jp1,"card1");
         //cards面板添加jp2
         cards.add(jp2,"card2");
+        //获取 cards 面板当前使用的布局管理器，并将其视为一个 CardLayout 对象，
+        // 然后将这个 CardLayout 对象的引用赋值给变量 cl，以便后续可以通过 cl 来操作卡片布局的显示。
         CardLayout cl = (CardLayout)(cards.getLayout());
         //调用show()方法显示jp2
         cl.show(cards,"card1");
