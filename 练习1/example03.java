@@ -22,6 +22,14 @@ class SumPrime{
         }
         return true;
     }
+    public void print() {
+        System.out.print("素数是：");
+        for (int i = this.s; i <= this.e; i++) {
+            if (isPrime(i)) {
+                System.out.print(i+" ");
+            }
+        }
+    }
     public int countSum(){
         int res = 0;
         for (int i = this.s ;i <= this.e; i++){
@@ -42,6 +50,7 @@ class MyThread extends Thread{
     @Override
     public void run(){
         SumPrime r = new SumPrime(s,e);
+        r.print();
         System.out.println(r.countSum());
     }
 }
@@ -52,5 +61,6 @@ public class example03 {
         Thread t2 = new MyThread(1000,2000);
         t1.start();
         t2.start();
+
     }
 }
