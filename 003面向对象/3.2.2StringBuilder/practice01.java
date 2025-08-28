@@ -1,7 +1,20 @@
 public class practice01 {
-    static String buildInsertSql(String table, String[] feilds){
-        //TODO
-        return "";
+    static String buildInsertSql(String table, String[] fields){
+        StringBuilder fieldPart = new StringBuilder();
+        StringBuilder valuePart = new StringBuilder();
+        fieldPart.append("(");
+        valuePart.append("(");
+        for(int i = 0;i <fields.length; i++){
+            fieldPart.append(fields[i]);
+            valuePart.append("?");
+            if ( i != fields.length - 1){
+                fieldPart.append(", ");
+                valuePart.append(", ");
+            }
+        }
+        fieldPart.append(")");
+        valuePart.append(")");
+        return "INSERT INTO "+ table + " " + fieldPart + " VALUES " + valuePart;
     }
 
     public static void main(String[] args){
